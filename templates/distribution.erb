@@ -3,12 +3,12 @@
 # Changes WILL BE overwritten! Any permanent changes must be checked
 # into git.
 
-Origin: vanutsteen.nl
-Label: vanutsteen.nl
-Codename: raring
-Architectures: i386 amd64 armhf
-Components: main
-Description: vanutsteen.nl Repository
+Origin: <%= origin %>
+Label: <%= label %>
+Codename: <%= distribution %>
+Architectures: <%= architectures.join(' ') %>
+Components: <%= components.join(' ') %>
+Description: <%= description %>
 # SignWith: no
 # DebOverride: override.etch
 # DscOverride: override.etch
