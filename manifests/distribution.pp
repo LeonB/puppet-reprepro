@@ -41,6 +41,7 @@ define reprepro::distribution (
 		require     => Reprepro::Repository[$repository],
 	}
 
+	# Check if architectures contains source
 	if inline_template("<%= architectures.include?('source') %>") == "true" {
 		$include_src = true
 	} else {
