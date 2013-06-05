@@ -1,6 +1,6 @@
 class reprepro::config {
 
-	file { $basedir:
+	file { $reprepro::basedir:
 		ensure  => directory,
 		force   => true,
 		recurse => true,
