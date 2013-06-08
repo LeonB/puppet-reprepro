@@ -1,6 +1,6 @@
 class reprepro::package {
 
-	package  { $reprepro::package_name:
-		ensure => $reprepro::ensure,
-	}
+  package  { $reprepro::package_name:
+    ensure => $reprepro::ensure,
+  }
 }

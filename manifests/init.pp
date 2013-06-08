@@ -4,15 +4,15 @@
 # http://davehall.com.au/blog/dave/2010/02/06/howto-setup-private-package-repository-reprepro-nginx
 
 class reprepro(
-	$package_name = params_lookup( 'package_name' ),
-	$enabled      = params_lookup( 'enabled' ),
-	$basedir      = params_lookup( 'basedir' ),
+  $package_name = params_lookup( 'package_name' ),
+  $enabled      = params_lookup( 'enabled' ),
+  $basedir      = params_lookup( 'basedir' ),
   ) inherits reprepro::params {
 
-  	$ensure = $enabled ? {
-  		true => present,
-  		false => absent
-  	}
+    $ensure = $enabled ? {
+      true => present,
+      false => absent
+    }
 
-	include reprepro::package, reprepro::config
+  include reprepro::package, reprepro::config
 }

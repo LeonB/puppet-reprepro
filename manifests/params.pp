@@ -14,13 +14,13 @@
 #
 class reprepro::params {
 
-	### Application related parameters
+  ### Application related parameters
 
-	$package_name = $::operatingsystem ? {
-		default => 'reprepro'
-	}
+  $package_name = $::operatingsystem ? {
+    default => 'reprepro'
+  }
 
-	$enabled = true
-	$basedir = '/var/packages'
+  $enabled = true
+  $basedir = '/var/packages'
 
 }
