@@ -14,7 +14,7 @@ class reprepro::config {
   }
 
   nginx::vhost::snippet { 'autoindex':
-    ensure  => $reprepro::ensure
+    ensure  => $reprepro::ensure,
     vhost   => "repo.${::domain}",
     content => template('reprepro/nginx_vhost.erb'),
   }

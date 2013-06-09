@@ -28,7 +28,7 @@ define reprepro::distribution (
     target  => "${basedir}/${repository}/conf/distributions",
     content => template($template),
     notify  => $ensure ? {
-      'present' => Exec["export distribution ${::distribution}"],
+      'present' => Exec["export distribution ${distribution}"],
       default   => undef,
     },
   }
@@ -43,7 +43,7 @@ define reprepro::distribution (
   }
 
   # Check if architectures contains source
-  if inline_template('<%= architectures.include?('source') %>') == true {
+  if inline_template('<%= architectures.include?("source") %>') == true {
     $include_src = true
   } else {
     $include_src = false
